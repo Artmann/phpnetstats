@@ -1,0 +1,23 @@
+<?php
+
+class Database
+{
+    static $host = "localhost";
+    static $database = "";
+    static $username = "root";
+    static $password = "";
+
+    public static function Query($sql, $data)
+    {
+        $connection = new PDO("mysql:host=".Database::$host.";dbname=".Database::$database, Database::$username, Database::$password);
+
+        $res = $connection->prepare($sql);
+        $res->execute($data);
+
+        if(!$res)
+            throw new Exception($connection->errorInfo());
+
+        return $res;
+    }
+
+}

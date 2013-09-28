@@ -1,0 +1,23 @@
+* {
+	margin: 0em;
+	padding: 0em;
+}
+
+body {
+	background: #D3D3D3;
+}
+
+.wrapper {
+	background: #FFF;
+	width: 70em;
+	padding: 2em;
+	margin: 3em auto;
+	border: solid 1px #333;
+	text-align: center;
+}
+
+.chart {
+	width: 65em;
+	height: 27em;
+	margin: 6em auto;
+}
